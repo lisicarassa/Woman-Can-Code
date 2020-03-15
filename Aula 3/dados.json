@@ -2,5 +2,5 @@
   "turma": "react",
   "aula": 3,
   "cidade": "campinas",
-  "finalizado": "não"
+  "finalizado": true
 }
