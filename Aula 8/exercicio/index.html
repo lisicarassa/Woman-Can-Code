@@ -1,0 +1,37 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Exercício</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="content">
+    <div class="card">
+      <!-- card da pergunta -->
+      <div class="questao" id="questao">
+        Como recuperar uma informação do localStorage?
+      </div>
+      <!-- mostra resposta do localstorage e no html -->
+      <div class="mostra-resposta" id="mostra-resposta">
+        Você deve usar o localStorage.getItem() ou ver a aula da Jeniffer
+      </div>
+    </div>
+    <!-- deleta resposta do localStorage-->
+    <button id="deletar-resposta" class="botao deletar">Deletar Resposta</button>
+
+    <div class="campo-resposta">
+      <!-- campo para inserir resposta no localstorage e no html-->
+      <textarea id="sua-resposta" placeholder="Digite a sua resposta aqui"></textarea>
+      <!-- adicionar resposta-->
+      <button id="adicionar-resposta" class="botao adicionar">Adicionar resposta</button>
+    </div>
+  </div>
+
+
+  <script src="app.js"></script>
+</body>
+
+</html>
