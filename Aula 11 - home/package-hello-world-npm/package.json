@@ -1,0 +1,22 @@
+{
+  "name": "hello-world",
+  "version": "0.0.1",
+  "description": "Say hello in terminal",
+  "scripts": {
+    "start": "node ola.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "hello",
+    "world",
+    "terminal"
+  ],
+  "author": "Lisiane",
+  "license": "MIT",
+  "dependencies": {
+    "moment": "^2.24.0"
+  },
+  "devDependencies": {
+    "jest": "^25.1.0"
+  }
+}
