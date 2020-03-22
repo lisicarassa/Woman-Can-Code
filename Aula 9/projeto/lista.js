@@ -12,6 +12,9 @@ class Lista {
   montaArray() {
     //verifica se existe algo no local storage
     // atualiza array usar JSON.parse
+    if (localStorage.getItem("compras")) {
+      this.arrayDeItens = JSON.parse(localStorage.getItem("compras"))
+    }
   }
 
   // ------ EXECUTA ESSA FUNÇÃO AO DISPARAR O EVENTO DE DOMContentLoaded -------------
@@ -19,6 +22,9 @@ class Lista {
   // método para montar a lista fazendo o loop entre os dados do array
   montaLista() {
     // loop com os dados do array e atualiza html
+    while (this.listaDeCompras.firstChild) {
+      this.listaDeCompras.firstChild.remove()
+    }
   }
 
   // ------ EXECUTA ESSA FUNÇÃO AO DISPARAR O EVENTO DE Click no botão adicionar -----
