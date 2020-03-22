@@ -7,7 +7,7 @@ class Pergunta {
         this.votos = document.querySelector("#pergunta-votos")
         this.data = document.querySelector("#pergunta-data")
         this.usuario = document.querySelector("#pergunta-usuario")
-        this.url = " http://localhost:3000/pergunta"
+        this.url = "http://localhost:3000/pergunta"
     }
     
     mostrarPergunta = async () => {
