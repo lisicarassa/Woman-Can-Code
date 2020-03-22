@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>POST Fetch</title>
+</head>
+
+<ul id="lista-compras"></ul>
+<input type="text" id="texto">
+<button id="botao-adicionar">Adicionar</button>
+
+<body>
+
+  <script>
+    const lista = document.querySelector("#lista-compras")
+    const texto = document.querySelector("#texto")
+    const botao = document.querySelector("#botao-adicionar")
+
+    // meu array
+    let arrayDeCompras = []
+
+    // minha funcao sincrona ES7
+    getCompras = async () => {
+      // crio um objeto com o metodo get
+      const headers = { method: 'get' }
+      // minha variavel do loop
+      let conteudo = ''
+
+      // aguardo a requisição finalizar
+      await fetch("http://localhost:3000/lista", headers)
+        .then(resposta => resposta.json())
+        .then(dados => arrayDeCompras = dados)
+
+      // loop no meu array de alunas
+      arrayDeCompras.forEach(compras => {
+        conteudo += `<li>${compras.name}</li>`
+      })
+
+      // atribuo na minha variavel de lista
+      lista.innerHTML = conteudo
+    }
+
+    // minha funcao sincrona ES7
+    postCompras = async () => {
+      // crio um objeto com o metodo delete
+      const requisicao = {
+        headers: { "Content-Type": "application/json" },
+        method: 'post',
+        body: JSON.stringify({
+          name: texto.value
+        })
+      }
+
+      // aguardo a requisição finalizar
+      await fetch("http://localhost:3000/lista", requisicao)
+        .then(resposta => resposta.json())
+        .then(dados => arrayDeCompras = dados)
+    }
+
+    // escuta o clique no botao
+    botao.addEventListener("click", postCompras)
+
+
+
+    // navegador termina de carregar e chama a função getAlunas
+    window.addEventListener("DOMContentLoaded", getCompras)
+  </script>
+
+</body>
+
+</html>
