@@ -1,0 +1,170 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
+  <title>StackOverflow (clone)</title>
+  <link href="./assets/css/styles.css" rel="stylesheet">
+  <link href="./assets/css/custom.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggle" data-target="#navbar-collapse-1" data-toggle="collapse" type="button"><span
+            class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span
+            class="icon-bar"></span></button><img style="width: 200px; margin-top: 6px;" src="./assets/images/logo.png"
+          alt="Logo"></a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="/">Ask question</a></li>
+          <li><a href="/">Tags</a></li>
+        </ul>
+        <p class="navbar-text navbar-right">Logado como <a id="nome" class="navbar-link" href="/">Lisiane</a> (<a
+            class="navbar-link" data-method="delete" href="/" rel="nofollow">Deslogar</a>)</p>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <div class="container">
+      <h1 id="titulo">O que é uma API REST?</h1>
+      <hr>
+      <div class="row">
+        <div class="col-md-9">
+          <div class="question">
+            <table class="fw" id="message-87">
+              <tbody>
+                <tr>
+                  <td class="votecell" rowspan="2">
+                    <div class="vote">
+                      <div class="text-center">
+                        <a id="btn-pergunta-cima" class="vote-up disabled">
+                          <span class="glyphicon glyphicon-circle-arrow-up"></span>
+                        </a>
+                      </div>
+                      <div id="pergunta-votos" class="score text-center">0</div>
+                      <div class="text-center">
+                        <a id="btn-pergunta-baixo" class="vote-down disabled">
+                          <span class="glyphicon glyphicon-circle-arrow-down"></span>
+                        </a>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="postcell">
+                    <p id="pergunta-conteudo">O que significa REST e RESTFul??</p>
+                    <p class="tags">
+                      <span id="tags" class="label label-info" >api</span>
+                      <!-- <span class="label label-info">javascript</span> -->
+                    </p>
+                    <table class="user-info">
+                      <tbody>
+                        <tr>
+                          <td colspan="2">perguntado em <br>
+                            <time id="pergunta-data">08 de Março de 2020</time>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="avatar">
+                            <img alt="testuser" height="30"
+                              src="http://gravatar.com/avatar/85e3339e2c78f081802575f4e8081792?default=identicon&amp;size=30"
+                              width="30">
+                          </td>
+                          <td><a id="pergunta-usuario" href="/">testuser</a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <p></p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <section id="answers">
+            <h3>1 resposta(s)</h3>
+            <ul>
+              <hr>
+              <li>
+                <table class="fw" id="message-88">
+                  <tbody>
+                    <tr>
+                      <td class="votecell" rowspan="2">
+                        <div class="vote">
+                          <div class="text-center">
+                            <a class="vote-up disabled">
+                              <span class="glyphicon glyphicon-circle-arrow-up"></span>
+                            </a>
+                          </div>
+                          <div id="votos" class="score text-center">0</div>
+                          <div class="text-center">
+                            <a class="vote-down disabled">
+                              <span class="glyphicon glyphicon-circle-arrow-down"></span>
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="postcell">
+                        <div class="col-md-10">
+
+                          <p>REST é uma arquitetura! Restful é o nome do sistema que usa a arquitetura. <br> A jeniffer
+                            já
+                            ensinou isso, aff!</p>
+                        </div>
+                        <div class="col-md-2">
+                          <a href="#" class="btn btn-danger" title="deletar">
+                            <i class="glyphicon glyphicon-trash"></i></a>
+                        </div>
+                        <table class="user-info">
+                          <tbody>
+                            <tr>
+                            </tr>
+                            <tr>
+                              <td colspan="2">Respondido em <br>
+                                <time>08 de Março de
+                                  2020</time>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="avatar"><img alt="testuser" height="30"
+                                  src="http://gravatar.com/avatar/85e3339e2c78f081802575f4e8081792?default=identicon&amp;size=30"
+                                  width="30"></td>
+                              <td><a href="">jeniffer</a></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <p></p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </li>
+              <hr>
+            </ul>
+          </section>
+          <div class="new_message" method="post">
+            <div class="form-group">
+              <label class="control-label" for="message_body">Sua resposta</label>
+              <textarea class="form-control" id="message_body" rows="10"></textarea>
+            </div>
+            <button class="btn btn-primary">Postar Resposta</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="text-muted">
+    <div class="container">
+      <div class="text-center">Judge a man by his questions rather than by his answers. ~ Voltaire</div>
+    </div>
+  </footer>
+
+<script src="./assets/js/usuario.js"></script>  
+<script src="./assets/js/pergunta.js"></script>
+<!--<script src="./assets/js/resposta.js"></script>-->
+<script src="./assets/js/app.js"></script>
+
+</body>
+
+</html>

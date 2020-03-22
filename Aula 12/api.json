@@ -1,0 +1,29 @@
+{
+  "usuario": {
+    "nome": "Jeniffer"
+  },
+  "pergunta": {
+    "titulo": "O que é uma API REST?",
+    "conteudo": "O que significa REST e RESTFul??",
+    "tags": "api",
+    "votos": "1",
+    "data": "08 de Março de 2020",
+    "usuario": "testuser"
+  },
+  "respostas": [
+    {
+      "id": 1,
+      "conteudo": "Pergunta pra jeniffer",
+      "votos": 2,
+      "data": "09 de março de 2020",
+      "usuario": "alunodosbons"
+    },
+    {
+      "id": 2,
+      "conteudo": "Pergunta pro google",
+      "votos": 0,
+      "data": "09 de março de 2020",
+      "usuario": "zé"
+    }
+  ]
+}
