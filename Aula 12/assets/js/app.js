@@ -1,6 +1,6 @@
 const usuario = new Usuario()
 const pergunta = new Pergunta()
-// const resposta = new Resposta()
+const resposta = new Resposta()
 
 const btnPerguntaCima = document.querySelector("#btn-pergunta-cima")
 const btnPerguntaBaixo = document.querySelector("#btn-pergunta-baixo")
@@ -16,5 +16,5 @@ btnPerguntaBaixo.addEventListener("click", () => {
 window.addEventListener("DOMContentLoaded", () => {
     usuario.mostrarUsuarioLogado()
     pergunta.mostrarPergunta()
-    // resposta.mostrarResposta()
+    resposta.mostrarResposta()
 })
