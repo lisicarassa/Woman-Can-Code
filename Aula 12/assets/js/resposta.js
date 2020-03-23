@@ -24,7 +24,7 @@ class Resposta {
         <td class="votecell" rowspan="2">
         <div class="vote">
         <div class="text-center">
-        <a class="vote-up disabled">
+        <a class="vote-up disabled" data-answer="${resposta.id}">
         <span class="glyphicon glyphicon-circle-arrow-up"></span>
         </a>
         </div>
@@ -79,6 +79,7 @@ class Resposta {
       this.answers.innerHTML = answersHTML; 
     })
   }
+
   postar = async () => {
     const requisicao = {
       headers: { "Content-Type": "application/json" },
@@ -87,9 +88,28 @@ class Resposta {
         "conteudo": this.text.value,
         "votos": 0,
         "data": "22 de março de 2020",
-        "usuario": "futura dev",
+        "usuario": localStorage.getItem("usuario"),
       })
     }
     await fetch (this.url, requisicao)
+    this.mostrarResposta();
   }
+
+  adicionarVoto = async (id) => {
+    const currentAnswer = await fetch(`${this.url}/${id}`, {method: 'get'}).then(r => r.json());
+    const requisicao = {
+            headers: { "Content-Type": "application/json" },
+            method: 'put',
+            body: JSON.stringify({
+              id: currentAnswer.id,
+              conteudo: currentAnswer.conteudo,
+              data: currentAnswer.data,
+              usuario: currentAnswer.usuario,
+              votos: currentAnswer.votos + 1
+            })
+          }
+    await fetch (`${this.url}/${id}`, requisicao)
+    this.mostrarResposta();
+  }
+  
 }
